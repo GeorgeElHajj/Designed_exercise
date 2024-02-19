@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NavSearch() {
     return (
-        <div className=" bg-gr w-3/5">
+        <div className=" bg-gr w-3/5  ">
             <nav className="flex flex-row m-10">
                 <Link href="/"><img src="Logo.svg" alt="logo" className="w-14 h-14 mx-20" /></Link>
                 <ul className="flex flex-row items-center p-0 list-none justify-center space-x-20">
