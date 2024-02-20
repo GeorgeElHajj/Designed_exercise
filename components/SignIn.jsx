@@ -3,13 +3,13 @@ import Link from "next/link";
 export default function SignIn() {
     return (
         <div className=" bg-gg h-auto rounded-bl-3xl w-2/5">
-            <nav className="flex flex-row m-10 justify-center mt-8">
-                <div className="flex flex-row items-center space-x-20">
-                    <Link href="#" className="text-lg font-bold text-white mr-2">Sign in</Link>
-                    <div className="relative py-3 px-4 mb-2">
-                        <div className="text-lg bg-white rounded-xl flex items-center border border-gray-300">
+            <nav className="flex flex-row m-12 justify-center">
+                <div className="flex flex-row items-center ">
+                    <Link href="#" className="text-lg font-bold text-white mr-20">Sign in</Link>
+                    <div className="relative">
+                        <div className="text-lg bg-white rounded-xl flex items-center border border-gray-300 ml-20">
                             <img src="sign-in.svg" alt="Sign In Icon" className="h-6 w-6 ml-2" />
-                            <Link href="#" className="ml-2 p-2 font-bold">Create Account</Link>
+                            <Link href="#" className="p-2 font-bold">Create Account</Link>
                         </div>
                     </div>
                 </div>
