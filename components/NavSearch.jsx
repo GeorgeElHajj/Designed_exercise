@@ -1,37 +1,60 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function NavSearch() {
+    const [burgerBtn, setBurgerBtn] = useState(false);
+
+    function handleClick() {
+        setBurgerBtn(bgBtn => !bgBtn);
+    }
+
     return (
-        <div className=" bg-gr w-3/5  px-20">
-            <nav className="flex flex-row m-10   mx-auto">
-                <Link href="/"><img src="Logo.svg" alt="logo" className="w-14 h-14 mr-24" /></Link>
-                <ul className="flex flex-row items-center p-0 list-none justify-center space-x-20">
-                    <li className="text-xl font-bold"><Link href="#">Home</Link></li>
-                    <li className="text-xl font-bold"><Link href="#">Job</Link></li>
-                    <li className="text-xl font-bold"><Link href="#">About us</Link></li>
-                    <li className="text-xl font-bold"><Link href="#">Contact</Link></li>
-                </ul>
+        <div className="bg-gr md:w-3/5 w-full px-10 xl:px-20">
+            <nav className="flex flex-row m-10 mx-auto justify-between items-center">
+                <div className="flex items-center">
+                    <Link href="/">
+                        <img src="Logo.svg" alt="logo" className="w-14 h-14 xl:mr-24 mr-12" />
+                    </Link>
+                    <ul className="flex md:flex-row items-center p-0 list-none justify-center xl:space-x-20 space-x-10">
+                        <li className="xl:text-xl text-lg font-bold"><Link href="#">Home</Link></li>
+                        <li className="xl:text-xl text-lg font-bold"><Link href="#">Job</Link></li>
+                        <li className="xl:text-xl text-lg font-bold"><Link href="#">About us</Link></li>
+                        <li className="xl:text-xl text-lg font-bold"><Link href="#">Contact</Link></li>
+                    </ul>
+                </div>
+                <button className="block md:hidden text-black z-20 text-xl" onClick={handleClick}>
+                    {burgerBtn ? <i className="fa fa-times"></i> : <i className="fa fa-bars"></i>}
+                </button>
             </nav>
 
-            <div className=" mt-24 ">
-                <h1 className="text-5xl font-bold">Search, Find, & Apply</h1>
-                <p className="mt-8 text-lg">
+            {burgerBtn && (
+                <ul className="flex flex-col items-center p-0 list-none justify-center bg-white rounded-lg shadow-xl mt-4">
+                    <li className="text-lg font-bold mb-2"><Link href="#">Home</Link></li>
+                    <li className="text-lg font-bold mb-2"><Link href="#">Job</Link></li>
+                    <li className="text-lg font-bold mb-2"><Link href="#">About us</Link></li>
+                    <li className="text-lg font-bold mb-2"><Link href="#">Contact</Link></li>
+                </ul>
+            )}
+
+            <div className="xl:mt-24 mt-12">
+                <h1 className="xl:text-5xl text-3xl font-bold">Search, Find, & Apply</h1>
+                <p className="xl:mt-8 mt-6 xl:text-lg text-base">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed <br />
                     quis lacus non orci euismod vestibulum vitae ut ex. Quisque <br />
                     ut arcu at lectus tristique auctor sit amet at turpis.
                 </p>
-                <form className="flex flex-row mt-10 bg-white mb-14 rounded-xl justify-between items-center  py-3 px-4 relative">
+                <form className="flex flex-row xl:mt-10 mt-8 bg-white xl:mb-14 mb-8 rounded-xl justify-between items-center xl:py-3 py-1 xl:px-4 px-2 relative">
                     <div>
-                        <input type="search" placeholder="Job title, or keyword" className="py-2 pl-8 rounded-lg bg-gr text-black" />
+                        <input type="search" placeholder="Job title, or keyword" className="py-2 pl-8 rounded-lg bg-gr bg-cover text-black xl:text-base text-xs xl:w-auto w-40" />
                         <img src="search.svg" alt="Search Icon" className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6" />
                     </div>
                     <div>
-                        <input type="text" placeholder="Location" className="py-2 pl-8 rounded-lg bg-gr text-black" />
-                        <img src="location.svg" alt="Location Icon" className="absolute  top-1/2 transform -translate-y-1/2 h-6 w-6" />
+                        <input type="text" placeholder="Location" className="py-2 pl-8 rounded-lg bg-gr bg-cover text-black xl:text-base text-xs xl:w-auto w-32" />
+                        <img src="location.svg" alt="Location Icon" className="absolute top-1/2 transform -translate-y-1/2 h-6 w-6" />
                     </div>
-                    <button type="submit" className="bg-gg text-white font-bold py-2 px-4 rounded-lg text-sm">Search</button>
+                    <button type="submit" className="bg-gg text-white font-bold xl:py-2 py-1 xl:px-4 px-3 rounded-lg xl:text-sm text-xs">Search</button>
                 </form>
-
             </div>
         </div>
     );
