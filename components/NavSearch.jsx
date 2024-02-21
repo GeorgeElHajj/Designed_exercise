@@ -29,13 +29,15 @@ export default function NavSearch() {
                     {burgerBtn ? <img src="close.svg" className="h-10 w-10" /> : <img src="burger.svg" className="h-10 w-10" />}
                 </button>
             </nav>
-            <div className="xl:mt-24 mt-12 flex flex-col md:justify-normal justify-center md:items-start items-center">
+            <div className="xl:mt-24 mt-12 ">
+                <div className="flex flex-col justify-center items-center">
                 <h1 className="xl:text-5xl text-3xl font-bold">Search, Find, & Apply</h1>
                 <p className="xl:mt-8 mt-6 xl:text-lg text-base">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed <br />
                     quis lacus non orci euismod vestibulum vitae ut ex. Quisque <br />
                     ut arcu at lectus tristique auctor sit amet at turpis.
                 </p>
+                </div>
                 <form className="flex flex-row xl:mt-10 mt-8 bg-white xl:mb-14 mb-8 rounded-xl justify-between items-center xl:py-3 py-1 xl:px-4 px-2 relative">
                     <div>
                         <input type="search" placeholder="Job title, or keyword" className="py-2 pl-8 rounded-lg bg-gr bg-cover text-black xl:text-base text-xs xl:w-auto w-40" />
