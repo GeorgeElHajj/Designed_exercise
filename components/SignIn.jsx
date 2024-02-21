@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function SignIn() {
     return (
         <div className=" bg-gg h-auto rounded-bl-3xl md:w-2/5 w-full">
-            <nav className="flex flex-row m-12  justify-center">
+            <nav className=" hidden md:flex flex-row m-12  justify-center">
                 <div className="flex flex-row items-center ">
                     <Link href="#" className="text-lg  font-bold text-white xl:mr-20 mr-16">Sign in</Link>
                     <div className="relative">
@@ -15,7 +15,7 @@ export default function SignIn() {
                 </div>
             </nav>
 
-            <div className="flex justify-start xl:ml-16 ml-10">
+            <div className="flex justify-start xl:ml-16 ml-10 mt-4">
                 <div className=" bg-white rounded-lg xl:w-16 w-12 xl:h-16 h-12 flex justify-center items-center transform -rotate-6 mb-6 ">
                     <img src="search1.svg" alt="Sign In Icon" className="xl:h-8 h-6 xl:w-8 w-6" />
                 </div>

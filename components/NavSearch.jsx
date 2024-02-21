@@ -16,28 +16,20 @@ export default function NavSearch() {
                     <Link href="/">
                         <img src="Logo.svg" alt="logo" className="w-14 h-14 xl:mr-24 mr-12" />
                     </Link>
-                    <ul className="flex md:flex-row items-center p-0 list-none justify-center xl:space-x-20 space-x-10">
+                    <ul className={!burgerBtn ? "hidden md:flex md:flex-row items-center p-0 list-none justify-center xl:space-x-20 space-x-10" :
+                        "flex flex-col rounded-lg shadow-xl mt-4 absolute top-20 left-0 z-10 w-full justify-center items-center bg-gr"}>
                         <li className="xl:text-xl text-lg font-bold"><Link href="#">Home</Link></li>
                         <li className="xl:text-xl text-lg font-bold"><Link href="#">Job</Link></li>
                         <li className="xl:text-xl text-lg font-bold"><Link href="#">About us</Link></li>
                         <li className="xl:text-xl text-lg font-bold"><Link href="#">Contact</Link></li>
                     </ul>
+
                 </div>
                 <button className="block md:hidden text-black z-20 text-xl" onClick={handleClick}>
-                    {burgerBtn ? <i className="fa fa-times"></i> : <i className="fa fa-bars"></i>}
+                    {burgerBtn ? <img src="close.svg" className="h-10 w-10" /> : <img src="burger.svg" className="h-10 w-10" />}
                 </button>
             </nav>
-
-            {burgerBtn && (
-                <ul className="flex flex-col items-center p-0 list-none justify-center bg-white rounded-lg shadow-xl mt-4">
-                    <li className="text-lg font-bold mb-2"><Link href="#">Home</Link></li>
-                    <li className="text-lg font-bold mb-2"><Link href="#">Job</Link></li>
-                    <li className="text-lg font-bold mb-2"><Link href="#">About us</Link></li>
-                    <li className="text-lg font-bold mb-2"><Link href="#">Contact</Link></li>
-                </ul>
-            )}
-
-            <div className="xl:mt-24 mt-12">
+            <div className={"xl:mt-24 mt-12"}>
                 <h1 className="xl:text-5xl text-3xl font-bold">Search, Find, & Apply</h1>
                 <p className="xl:mt-8 mt-6 xl:text-lg text-base">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed <br />
@@ -56,6 +48,7 @@ export default function NavSearch() {
                     <button type="submit" className="bg-gg text-white font-bold xl:py-2 py-1 xl:px-4 px-3 rounded-lg xl:text-sm text-xs">Search</button>
                 </form>
             </div>
+
         </div>
     );
 }
