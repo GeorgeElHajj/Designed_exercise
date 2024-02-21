@@ -10,18 +10,18 @@ export default function NavSearch() {
     }
 
     return (
-        <div className="bg-gr md:w-3/5 w-full px-10 xl:px-20">
-            <nav className="flex flex-row m-10 mx-auto justify-between items-center">
+        <div className="bg-gr md:w-3/5 w-full px-5 xl:px-20">
+            <nav className="flex flex-row md:m-10 m-8 md:mx-auto justify-between items-center">
                 <div className="flex items-center">
                     <Link href="/">
                         <img src="Logo.svg" alt="logo" className="w-14 h-14 xl:mr-24 mr-12" />
                     </Link>
                     <ul className={!burgerBtn ? "hidden md:flex md:flex-row items-center p-0 list-none justify-center xl:space-x-20 space-x-10" :
                         "flex flex-col rounded-lg shadow-xl mt-4 absolute top-20 left-0 z-10 w-full justify-center items-center bg-gr"}>
-                        <li className="xl:text-xl text-lg font-bold"><Link href="#">Home</Link></li>
-                        <li className="xl:text-xl text-lg font-bold"><Link href="#">Job</Link></li>
-                        <li className="xl:text-xl text-lg font-bold"><Link href="#">About us</Link></li>
-                        <li className="xl:text-xl text-lg font-bold"><Link href="#">Contact</Link></li>
+                        <li className="xl:text-xl py-2 text-lg font-bold"><Link href="#">Home</Link></li>
+                        <li className="xl:text-xl py-2 text-lg font-bold"><Link href="#">Job</Link></li>
+                        <li className="xl:text-xl py-2 text-lg font-bold"><Link href="#">About us</Link></li>
+                        <li className="xl:text-xl py-2 text-lg font-bold"><Link href="#">Contact</Link></li>
                     </ul>
 
                 </div>

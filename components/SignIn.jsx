@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function SignIn() {
     return (
-        <div className=" bg-gg h-auto rounded-bl-3xl md:w-2/5 w-full">
+        <div className=" bg-gg h-auto md:rounded-bl-3xl md:w-2/5 w-full">
             <nav className=" hidden md:flex flex-row m-12  justify-center">
                 <div className="flex flex-row items-center ">
                     <Link href="#" className="text-lg  font-bold text-white xl:mr-20 mr-16">Sign in</Link>
